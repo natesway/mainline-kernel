@@ -3,6 +3,8 @@
 # Exit on errors
 set -e
 
+CWD=$(pwd)
+
 # Kernel Version
 case $1 in
 stable)
@@ -178,7 +180,7 @@ cd $HDR_PATH
 tar -cvI "xz -9 -T0" -f ../../$HEADERS *
 echo "$HEADERS created!"
 
-cd
+cd $CWD
 
 case $1 in
 stable)

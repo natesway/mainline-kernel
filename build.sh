@@ -178,6 +178,8 @@ cd $HDR_PATH
 tar -cvI "xz -9 -T0" -f ../../$HEADERS *
 echo "$HEADERS created!"
 
+cd
+
 case $1 in
 stable)
   ./generate-initramfs.sh stable

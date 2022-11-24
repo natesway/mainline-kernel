@@ -1,7 +1,7 @@
 name: Build kernels
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "initramfs" ]
   workflow_dispatch:
 concurrency:
   group: ${{ github.ref }}

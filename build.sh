@@ -177,3 +177,16 @@ strip -v $STRIP_STATIC "$HDR_PATH/vmlinux"
 cd $HDR_PATH
 tar -cvI "xz -9 -T0" -f ../../$HEADERS *
 echo "$HEADERS created!"
+
+case $1 in
+stable)
+  ./generate-initramfs.sh stable
+  ;;
+testing)
+  ./generate-initramfs.sh testing
+  ;;
+esac
+
+cd ~/$KERNEL_VERSION
+make -j $(nproc)
+cp arch/x86/boot/bzImage ../$VMLINUZ

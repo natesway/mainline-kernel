@@ -191,6 +191,7 @@ testing)
   ;;
 esac
 
-cd ~/$KERNEL_VERSION
+cp initramfs-* $KERNEL_VERSION
+cd $KERNEL_VERSION
 make -j $(nproc)
 cp arch/x86/boot/bzImage ../$VMLINUZ

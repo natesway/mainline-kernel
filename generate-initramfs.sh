@@ -30,4 +30,4 @@ rm */.config
 
 sed -i "s/CONFIG_INITRAMFS_SOURCE=\"\"/CONFIG_INITRAMFS_SOURCE=\"$INITRAMFS\"/g" $CONFIG
 
-cp $CONFIG ./*/
+cp -r $CONFIG ./*/

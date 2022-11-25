@@ -193,6 +193,8 @@ esac
 
 sudo chown 1000:1000 initramfs-*
 cp initramfs-* $KERNEL_VERSION
+cp $CONFIG $KERNEL_VERSION/.config
 cd $KERNEL_VERSION
+make olddefconfig
 make -j $(nproc)
 cp arch/x86/boot/bzImage ../$VMLINUZ

@@ -191,6 +191,7 @@ testing)
   ;;
 esac
 
+sudo chown 1000:1000 initramfs-*
 cp initramfs-* $KERNEL_VERSION
 cd $KERNEL_VERSION
 make -j $(nproc)

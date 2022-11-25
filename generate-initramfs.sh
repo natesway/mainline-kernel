@@ -18,14 +18,16 @@ case $1 in
   ;;
 esac
 
-rm /boot/*
-cp $VMLINUZ /boot/vmlinuz-eupnea
-tar xf $MODULES -C /lib/modules/
+sudo rm /boot/*
+sudo cp $VMLINUZ /boot/vmlinuz-eupnea
+sudo tar xf $MODULES -C /lib/modules/
 
 sudo apt install dracut
 
-dracut $INITRAMFS
+sudo dracut $INITRAMFS
 
 rm */.config
 
 sed -i "s/CONFIG_INITRAMFS_SOURCE=\"\"/CONFIG_INITRAMFS_SOURCE=\"$INITRAMFS\"/g" $CONFIG
+
+cp $CONFIG ./*/

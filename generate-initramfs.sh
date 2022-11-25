@@ -25,7 +25,7 @@ sudo tar xf $MODULES -C /lib/modules/
 sudo apt install dracut
 
 sudo dracut $INITRAMFS
-
+sudo chmod 777 $INITRAMFS
 rm */.config
 
 sed -i "s/CONFIG_INITRAMFS_SOURCE=\"\"/CONFIG_INITRAMFS_SOURCE=\"$INITRAMFS\"/g" $CONFIG

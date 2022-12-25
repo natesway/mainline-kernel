@@ -1,7 +1,7 @@
 name: Build kernels with initramfs(v2)
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "initramfs-v2" ]
   schedule:
     - cron: "10 0 * * *" # run at the start of every day after configs are updated
   workflow_dispatch:

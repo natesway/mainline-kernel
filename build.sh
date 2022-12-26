@@ -68,7 +68,7 @@ esac
 make olddefconfig
 
 # Generate initramfs
-dracut --no-kernel --gzip initfs.cpio.gz
+dracut --no-kernel --gzip --reproducible --no-hostonly --nofscks initfs.cpio.gz
 
 # If the terminal is interactive and not running in docker
 if [[ -t 0 ]] && [[ ! -f /.dockerenv ]]; then

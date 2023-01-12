@@ -43,8 +43,23 @@ cd $KERNEL_VERSION
 # Apply patch to fix speakers on kbl avs
 if [ $1 == stable ]; then # This has been merged into mainline since v6.2
 	patch -p1 < ../kbl-avs.patch
-        for i in ../patches/*.patch; do patch -Np1 -i < $i; done
-        
+	patch -Np1 < 0001-mm-Support-soft-dirty-flag-reset-for-VA-range.patch
+	patch -Np1 < 0001-add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
+	patch -Np1 < 0002-clear-patches.patch
+	patch -Np1 < 0002-mm-Support-soft-dirty-flag-read-with-reset.patch
+	patch -Np1 < 0003-glitched-base.patch
+	patch -Np1 < 0003-glitched-cfs-additions.patch
+	patch -Np1 < 0003-glitched-cfs.patch
+	patch -Np1 < 0005-glitched-pds.patch
+	patch -Np1 < 0006-add-acs-overrides_iommu.patch
+	patch -Np1 < 0007-v6.1-fsync1_via_futex_waitv.patch
+	patch -Np1 < 0007-v6.1-winesync.patch
+	patch -Np1 < 0008-6.1-bcachefs.patch
+	patch -Np1 < 0009-glitched-bmq.patch
+	patch -Np1 < 0009-glitched-ondemand-bmq.patch
+	patch -Np1 < 0009-prjc_v6.1-r1.patch
+	patch -Np1 < 0012-misc-additions.patch
+	patch -Np1 < 0013-optimize_harder_O3.patch
 fi
 
 # Prevents a dirty kernel

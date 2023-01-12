@@ -48,8 +48,6 @@ if [ $1 == stable ]; then # This has been merged into mainline since v6.2
 	patch -Np1 < ../patches/0002-clear-patches.patch
 	patch -Np1 < ../patches/0002-mm-Support-soft-dirty-flag-read-with-reset.patch
 	patch -Np1 < ../patches/0003-glitched-base.patch
-	patch -Np1 < ../patches/0003-glitched-cfs-additions.patch
-	patch -Np1 < ../patches/0003-glitched-cfs.patch
 	patch -Np1 < ../patches/0005-glitched-pds.patch
 	patch -Np1 < ../patches/0006-add-acs-overrides_iommu.patch
 	patch -Np1 < ../patches/0007-v6.1-fsync1_via_futex_waitv.patch

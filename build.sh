@@ -43,7 +43,8 @@ cd $KERNEL_VERSION
 # Apply patch to fix speakers on kbl avs
 if [ $1 == stable ]; then # This has been merged into mainline since v6.2
 	patch -p1 < ../kbl-avs.patch
-        patch -Np1 -i ../patches/*.patch
+        for i in ../patches/*.patch; do patch -Np1 -i < $i; done
+        
 fi
 
 # Prevents a dirty kernel

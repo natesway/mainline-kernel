@@ -52,7 +52,6 @@ patch -Np1 < ../patches/0003-glitched-base.patch
 patch -Np1 < ../patches/0005-glitched-pds.patch
 patch -Np1 < ../patches/0006-add-acs-overrides_iommu.patch
 patch -Np1 < ../patches/0007-v6.1-winesync.patch
-patch -Np1 < ../patches/0009-glitched-bmq.patch
 patch -Np1 < ../patches/0009-prjc_v6.1-r1.patch
 patch -Np1 < ../patches/0012-misc-additions.patch
 patch -Np1 < ../patches/0013-optimize_harder_O3.patch

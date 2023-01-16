@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 1
 
       - name: Installing dependencies
-        run: sudo apt update && sudo apt install git build-essential ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison binutils ccache cpio fakeroot kmod libncurses5-dev lz4 qtbase5-dev rsync schedtool wget
+        run: sudo apt update && sudo apt install git build-essential dwarves ncurses-dev xz-utils libssl-dev bc flex libelf-dev bison binutils ccache cpio fakeroot kmod libncurses5-dev lz4 qtbase5-dev rsync schedtool wget
 
       - name: Building the stable Kernel
         run: chmod +x build2.sh && ./build2.sh stable

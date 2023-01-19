@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: kernel-stable
-          retention-days: 1
+          retention-days: 36
           path: |
             bzImage-stable
             modules-stable.tar.xz
